@@ -30,3 +30,18 @@ Features
 Status
 
 🚧 Under development
+
+## Roadmap
+
+- [x] Repository created
+- [x] Initial README
+- [x] SPI enabled on Orange Pi PC
+- [ ] Detect LCD
+- [ ] First pixel on display
+- [ ] Device Tree Overlay
+- [ ] Touchscreen (XPT2046)
+- [ ] Screen rotation support
+- [ ] KlipperScreen integration
+- [ ] One-command installer
+- [ ] Documentation
+- [ ] Version 1.0 Release
