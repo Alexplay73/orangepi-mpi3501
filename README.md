@@ -1,6 +1,17 @@
 # OrangePi MPI3501
 
 ILI9486 + XPT2046 display support for Orange Pi H3 boards.
+## Supported hardware
+
+### SBC
+
+- [x] Orange Pi PC (H3)
+
+### LCD
+
+- [x] MPI3501
+- [x] ILI9486
+- [x] XPT2046
 
 Tested on:
 
