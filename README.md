@@ -1,4 +1,7 @@
 # OrangePi MPI3501
+> **Work in Progress**
+>
+> Bringing native MPI3501 (ILI9486 + XPT2046) support to Orange Pi H3 boards running modern Armbian.
 
 ILI9486 + XPT2046 display support for Orange Pi H3 boards.
 ## Supported hardware
