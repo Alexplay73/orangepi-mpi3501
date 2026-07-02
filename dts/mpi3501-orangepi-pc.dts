@@ -1,0 +1,14 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "xunlong,orangepi-pc";
+
+    fragment@0 {
+        target = <&spi0>;
+
+        __overlay__ {
+            status = "okay";
+        };
+    };
+};
