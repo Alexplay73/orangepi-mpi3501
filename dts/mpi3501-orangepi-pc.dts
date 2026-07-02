@@ -1,3 +1,15 @@
+/*
+ * Orange Pi PC + MPI3501
+ *
+ * Initial Device Tree Overlay
+ *
+ * Project:
+ * https://github.com/Alexplay73/orangepi-mpi3501
+ *
+ * Copyright (c) 2026 Emrah Güven
+ * Licensed under the MIT License.
+ */
+
 /dts-v1/;
 /plugin/;
 
@@ -5,10 +17,15 @@
     compatible = "xunlong,orangepi-pc";
 
     fragment@0 {
-        target = <&spi0>;
+        target-path = "/soc/spi@1c68000";
 
         __overlay__ {
+
             status = "okay";
+
+            #address-cells = <1>;
+            #size-cells = <0>;
+
         };
     };
 };
