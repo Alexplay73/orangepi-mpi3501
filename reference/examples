@@ -1,0 +1,37 @@
+/dts-v1/;
+/plugin/;
+/ {
+    compatible = "allwinner,sun8i-h3";
+    fragment@0 {
+        target = <&spi1>;
+        __overlay__ {
+            #address-cells = <1>;
+            #size-cells = <0>;
+            status = "okay";
+
+            panel: display@0 {
+                compatible = "waveshare,rpi-lcd-35", "ilitek,ili9486";
+                reg = <0>;
+                spi-max-frequency = <32000000>;
+                dc-gpios = <&pio 0 2 0>;      /* PA2 - D/C */
+                reset-gpios = <&pio 0 18 0>;  /* PA18 - RESET */
+                rotation = <90>;
+            };
+
+            touch: touch@1 {
+                compatible = "ti,ads7846";
+                reg = <1>;
+                spi-max-frequency = <1000000>;
+                interrupt-parent = <&pio>;
+                interrupts = <0 1 2>;         /* PA1 - IRQ (pin_no bank irq_type) */
+                pendown-gpio = <&pio 0 1 0>;
+                ti,x-min = <0>;
+                ti,x-max = <4095>;
+                ti,y-min = <0>;
+                ti,y-max = <4095>;
+                ti,pressure-max = <255>;
+                ti,swap-xy;
+            };
+        };
+    };
+};
